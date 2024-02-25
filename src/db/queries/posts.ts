@@ -13,6 +13,10 @@ export type PostWithData = Post & {
   };
 };
 
+// export type PostWithData = Awaited<
+//   ReturnType<typeof fetchPostsByTopicSlug>
+// >[number];
+
 export function fetchPostsByTopicSlug(
   topicSlug: string
 ): Promise<PostWithData[]> {
